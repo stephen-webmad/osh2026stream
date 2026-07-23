@@ -8,8 +8,11 @@ Enjoy!
 Note -to make your own full video of the streams, use ffmpeg - ie:
 "C:\Program Files (x86)\WinFF\ffmpeg.exe" -i "https://stream.webmad.co.nz/osh/osh.php?d=2" -c copy -bsf:a aac_adtstoasc "osh2026-day2.mp4"
 
-Day 3 gets a bit fun because htey have separated the video and audio streams. To bring them back together again, process after the fact:
+Day 3 gets a bit fun because they have separated the video and audio streams. To bring them back together again, process after the fact:
 "C:\Program Files (x86)\WinFF\ffmpeg.exe" -i "https://stream.webmad.co.nz/osh/osh.php?d=3v" -i "https://stream.webmad.co.nz/osh/osh.php?d=3a" -map 0:v:0 -map 1:a:0 -c:v copy -shortest -bsf:a aac_adtstoasc "osh2026-day3.mp4"
+Day 3 aaudio feed appears to have been purged - good thing I grabbed a copy before it was! We'll see if day 4 does the same - gotta get in quick!
+
+Day 4 follows the split stream approach, so we are running https://stream.webmad.co.nz/osh/player.php?d=4 in order to watch with audio in sync. All the fun.
 
 Note - all content is owned by EAA streamed via Brightcove - this code expresses no ownership transfer, it is purely a tool to enable playback outside of Brightcove's player
 We'll try to update this for each day's featured stream at timings that work. Note - we're in New Zealand, so timeframes flexible, but contribute as you like to keep this up to date.
